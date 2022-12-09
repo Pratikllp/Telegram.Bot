@@ -118,8 +118,8 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
         //For every message, check if the user is a member of the group/channel.
         // IF yes..skip the verification
         // IF no ..before to continue, ask to user to join the chat you want.
-        var getchatmember = await botClient.GetChatMemberAsync(/*ID or NAME of the chat*/"@zetalvx",/*user id*/ id);
-        var getchatmember2 = await botClient.GetChatMemberAsync(/*ID or NAME of the chat*/"@tutorialbotprogramming",/*user id*/ id);
+        var getchatmember = await botClient.GetChatMemberAsync(/*ID or NAME of the chat*/"@plp_mex",/*user id*/ id);
+        var getchatmember2 = await botClient.GetChatMemberAsync(/*ID or NAME of the chat*/"@plp_me",/*user id*/ id);
 
         //Using the string of the "Status" command, check if is member 
         if (getchatmember.Status.ToString() == "Left" || getchatmember.Status.ToString() == null || getchatmember.Status.ToString() == "null" || getchatmember.Status.ToString() == "" || getchatmember2.Status.ToString() == "Left" || getchatmember2.Status.ToString() == null || getchatmember2.Status.ToString() == "null" || getchatmember2.Status.ToString() == "")
@@ -130,8 +130,8 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
                     //First row. You can also add multiple rows.
                     new []
                     {
-                        InlineKeyboardButton.WithUrl(text: "Canale 1", url: "https://t.me/zetalvx"),
-                        InlineKeyboardButton.WithUrl(text: "Canale 2", url: "https://t.me/tutorialbotprogramming"),
+                        InlineKeyboardButton.WithUrl(text: "Canale 1", url: "https://t.me/plp_me"),
+                        InlineKeyboardButton.WithUrl(text: "Canale 2", url: "https://t.me/plp_me"),
                     },
                 });
 
